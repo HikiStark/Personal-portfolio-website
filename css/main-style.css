@@ -36,7 +36,8 @@ h2 {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
   font-weight: 100;
 }
 
@@ -145,14 +146,16 @@ img {
 
 .Hero-section {
   margin-bottom: 200px;
-  /* border-width: 0.5px;
-  border-style: dashed;
-  border-color: black; */
   height: 1500px;
   position: relative;
 }
 .Hero-section-text {
   color: var(--mainTextColor);
+}
+.border-dashed-sm {
+  border-width: 0.5px;
+  border-style: dashed;
+  border-color: black;
 }
 
 .Hero-section-animation {
@@ -163,17 +166,32 @@ img {
 }
 
 .Calltoaction-section {
-  border-width: 0.5px;
-  border-style: dashed;
-  border-color: black;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 .heading-2 {
   color: var(--mainTextColor);
 }
 
-.btn{
+.btn-md {
+  display: inline-block;
+  padding: 15px 32px;
+  color: var(--mainTextColor);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
+  border-radius: 10px;
   border-color: var(--accentMainColor);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Calltoaction-section-content {
+  max-width: 650px;
+}
+.smaller-placeholder {
+  max-width: 500px;
 }
