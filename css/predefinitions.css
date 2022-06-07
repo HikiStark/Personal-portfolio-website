@@ -42,6 +42,7 @@ p {
   font-size: 1.1rem;
   line-height: 1.8;
   font-weight: 100;
+  color: var(--mainTextColor);
 }
 
 img {
@@ -118,6 +119,11 @@ img {
     max-width: 1140px;
   }
 }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1315px;
+  }
+}
 
 .grid {
   display: grid;
@@ -162,6 +168,7 @@ img {
   padding: 15px 32px;
   color: var(--mainTextColor);
   font-size: 16px;
+  font-weight: 900;
   text-align: center;
   text-decoration: none;
   border-style: solid;
@@ -171,12 +178,14 @@ img {
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 10px 10px 0px var(--accentMainColor);
+  transition-duration: 0.3s;
 }
 
-.btn-md:hover{
-    background-color: var(--accentMainColor);
-    color: var(--purewhitecolor);
-    box-shadow: none;
+.btn-md:hover {
+  background-color: var(--accentMainColor);
+  color: var(--purewhitecolor);
+  box-shadow: none;
+  transition-duration: 0.3s;
 }
 
 .dotted-background {
@@ -212,11 +221,11 @@ img {
   );
 }
 
-.Horizontal-line{
-    height: 1px;
-    width: 100%;
-    border: none;
-    background-color: var(--accentMainColor);
-    margin-top: 20px;
-    margin-bottom: 20px;
+.Horizontal-line {
+  height: 1px;
+  width: 100%;
+  border: none;
+  background-color: var(--accentMainColor);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
