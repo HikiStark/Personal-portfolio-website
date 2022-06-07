@@ -4,7 +4,7 @@
   position: relative;
 }
 .Hero-section-text {
-  color: var(--mainTextColor);
+  color: var(--TextColor);
 }
 
 .Hero-section-animation {
@@ -24,7 +24,7 @@
 }
 
 .heading-2 {
-  color: var(--mainTextColor);
+  color: var(--TextColor);
 }
 
 .smaller-placeholder {
@@ -44,7 +44,7 @@
 }
 
 .Projects-section {
-  margin-top: 200px;
+  margin: 200px 0px;
 }
 
 .Project-card-img-div {
@@ -56,15 +56,16 @@
 .Project-card-img {
   width: 100%;
   border-radius: 8px;
-  border-color: var(--accentMainColor);
+  border-color: var(--MainColor);
   border-style: solid;
   border-width: 4px;
-  box-shadow: 10px 10px 0px var(--accentMainColor);
+  box-shadow: 10px 10px 0px var(--MainColor);
   transition-duration: 0.3s;
 }
 
 .Project-card-img:hover {
-  box-shadow: 2px 2px 0px 2px var(--accentMainColor), -2px -2px 0px 2px var(--accentMainColor);
+  box-shadow: 2px 2px 0px 2px var(--MainColor),
+    -2px -2px 0px 2px var(--MainColor);
   transition-duration: 0.3s;
 }
 
@@ -74,4 +75,78 @@
   gap: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .container .sec.Footer-aboutme {
+  width: 40%;
+}
+
+footer .container .sec.Footer-aboutme h3 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .container .sec.Footer-aboutme h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+
+footer p {
+  color: #999;
+}
+
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.sci li a:hover{
+  background-color: #f00;
+}
+
+.sci li a .fa {
+  color: #fff;
+  font-size: 20px;
 }
