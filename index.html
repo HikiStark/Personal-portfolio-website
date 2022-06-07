@@ -29,7 +29,7 @@
 
     <div class="container">
         <div class="Hero-section row">
-            <div class="Hero-section-text vertical-center col">
+            <div class="Hero-section-text vertical-center col" id="remove-verticalcentering">
                 <h1 class="heading-1">Hi, my<br>name is <b>Hikmat</b></h1>
                 <p>I'm a <b>creative developer</b> in Weingarten, Germany.</p>
             </div>
@@ -191,4 +191,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function ClassRemoverFunc() {
+            var element = document.getElementById("remove-verticalcentering");
+            element.classList.remove("vertical-center");
+            element.classList.remove("col");
+        }
+    </script>
 </body>
