@@ -14,6 +14,36 @@
   right: 0px;
 }
 
+@media (max-width: 375px) {
+  .Hero-section {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .Hero-section-text {
+  }
+
+  .Hero-section-animation {
+    position: relative;
+    margin: 0;
+    top: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1400px) {
+}
+@media (min-width: 2560px) {
+}
+
 .Calltoaction-section {
   margin-top: 100px;
   margin-bottom: 200px;
@@ -60,13 +90,15 @@
   border-style: solid;
   border-width: 4px;
   box-shadow: 10px 10px 0px var(--MainColor);
-  transition-duration: 0.3s;
+  transition: all 0.3s ease 0s;
 }
 
 .Project-card-img:hover {
-  box-shadow: 2px 2px 0px 2px var(--MainColor),
-    -2px -2px 0px 2px var(--MainColor);
-  transition-duration: 0.3s;
+  border-color: var(--ActiveColor);
+  /* box-shadow: 2px 2px 0px 2px var(--MainColor),
+    -2px -2px 0px 2px var(--MainColor); */
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .Project-card {
@@ -77,76 +109,6 @@
   padding-bottom: 30px;
 }
 
-footer {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding: 50px 100px;
-  background: #111;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-footer .container .sec.Footer-aboutme {
-  width: 40%;
-}
-
-footer .container .sec.Footer-aboutme h3 {
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-footer .container .sec.Footer-aboutme h3::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: #f00;
-}
-
-footer p {
-  color: #999;
-}
-
-.sci {
-  margin-top: 20px;
-  display: flex;
-}
-
-.sci li {
-  list-style: none;
-}
-
-.sci li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.sci li a:hover{
-  background-color: #f00;
-}
-
-.sci li a .fa {
-  color: #fff;
-  font-size: 20px;
+.Project-card-description p {
+  margin: 30px 0px;
 }

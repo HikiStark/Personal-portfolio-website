@@ -7,12 +7,15 @@
 }
 
 :root {
-  --MainColor: #5500ff;
+  --MainColor: #072ac8;
   --TextColor: var(--MainColor);
-  --Subtext: #0077ff;
-  --BGBright: #e9eaff;
+  --Subtext: #1e96fc;
+  --BGBright: #ededed;
   --White: #ffff;
+  --Red: #ff0000;
+  --BrightText: #a2d6f9;
   --BGDark: #3f14ff;
+  --ActiveColor: #ffc600;
 }
 
 * {
@@ -90,6 +93,7 @@ p {
   line-height: 1.8;
   font-weight: 100;
   color: var(--TextColor);
+  margin: 20px 0px;
 }
 
 img {
@@ -172,7 +176,7 @@ header {
 }
 
 .nav-links li a:hover {
-  color: var(--Subtext);
+  color: var(--ActiveColor);
 }
 
 .nav-button {
@@ -202,12 +206,12 @@ header {
 }
 
 .outlined-white-sm {
-  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: white;
 }
 
 .outlined-black-sm {
-  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: black;
 }
 
@@ -233,6 +237,12 @@ header {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 360px;
+  }
 }
 @media (min-width: 576px) {
   .container {
@@ -300,10 +310,7 @@ header {
   opacity: 0.2;
   background-color: var(--BGBright);
   background-size: 15px 15px;
-  background-image: radial-gradient(
-    var(--MainColor) 2px,
-    var(--BGBright) 2px
-  );
+  background-image: radial-gradient(var(--MainColor) 2px, var(--BGBright) 2px);
 }
 
 .diagonal-background {
@@ -344,3 +351,160 @@ header {
   border: none;
   background-color: var(--MainColor);
 }
+
+/* Footer style */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: var(--MainColor);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .container .sec.Footer-aboutme {
+  width: 40%;
+}
+
+footer .container h3 {
+  position: relative;
+  color: var(--White);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+footer .container h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--Red);
+}
+
+footer p {
+  color: var(--BrightText);
+  margin: 0;
+}
+
+footer svg {
+  fill: var(--White);
+}
+
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--BGBright);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.sci li a:hover {
+  background-color: var(--ActiveColor);
+  transition: all 0.3s ease 0s;
+}
+
+.sci li a .fa {
+  color: var(--White);
+  font-size: 20px;
+}
+
+.Footer-quicklinks {
+  position: relative;
+  width: 25%;
+}
+
+.Footer-quicklinks ul li {
+  list-style: none;
+}
+
+.Footer-quicklinks ul li a {
+  color: var(--BrightText);
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.Footer-quicklinks ul li a:hover {
+  color: var(--ActiveColor);
+  transition: all 0.3s ease 0s;
+}
+
+.Footer-contact {
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.Footer-contact .info {
+  position: relative;
+}
+
+.Footer-contact .info li {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.Footer-contact .info li span:nth-child(1) {
+  color: var(--White);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.Footer-contact .info li span {
+  color: var(--BrightText);
+}
+
+.Footer-contact .info li a {
+  color: var(--BrightText);
+  text-decoration: none;
+}
+
+.Footer-contact .info li a:hover {
+  color: var(--ActiveColor);
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .container .sec.Footer-aboutme,
+  .Footer-quicklinks,
+  .Footer-contact {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------------------------- */
