@@ -1,47 +1,85 @@
 .Hero-section {
-  margin-bottom: 200px;
-  height: 1500px;
   position: relative;
+  height: 100vh;
+  margin-bottom: 200px;
 }
 .Hero-section-text {
   color: var(--TextColor);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .Hero-section-animation {
   position: absolute;
-  top: 45%;
-  margin: 0;
-  right: 0px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-@media (max-width: 375px) {
-  .Hero-section {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-  .Hero-section-text {
-  }
-
-  .Hero-section-animation {
-    position: relative;
-    margin: 0;
-    top: none;
-    -ms-transform: none;
-    transform: none;
-  }
+.Hero-section-animation img {
+  height: 600px;
 }
-@media (max-width: 576px) {
+@media (min-width: 375px) {
+  
 }
-@media (max-width: 768px) {
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
 }
 @media (max-width: 992px) {
+  .Hero-section {
+    position: relative;
+    height: 100vh;
+    display: grid;
+  }
 }
-@media (max-width: 1200px) {
+@media (min-width: 992px) {
+  .Hero-section-text h1 {
+    font-size: 3.5rem;
+  }
+  .Hero-section-text p {
+    font-size: 0.9rem;
+  }
+  .Hero-section-animation img {
+    height: 400px;
+  }
 }
-@media (max-width: 1400px) {
+@media (min-width: 1200px) {
+  .Hero-section-text h1 {
+    font-size: 4.5rem;
+  }
+  .Hero-section-text p {
+    font-size: 1.2rem;
+  }
+  .Hero-section-animation img {
+    height: 500px;
+  }
+}
+@media (min-width: 1400px) {
+  .Hero-section-text h1 {
+    font-size: 5rem;
+  }
+  .Hero-section-text p {
+    font-size: 1.3rem;
+  }
+  .Hero-section-animation img {
+    height: 600px;
+  }
 }
 @media (min-width: 2560px) {
+  .Hero-section-text h1 {
+    font-size: 6rem;
+  }
+  .Hero-section-text p {
+    font-size: 1.6rem;
+  }
+  .Hero-section-animation img {
+    height: 800px;
+  }
 }
 
 .Calltoaction-section {
@@ -50,7 +88,7 @@
 }
 
 .Calltoaction-section-content {
-  max-width: 650px;
+  min-width: 650px;
 }
 
 .heading-2 {
@@ -58,7 +96,7 @@
 }
 
 .smaller-placeholder {
-  max-width: 500px;
+  min-width: 500px;
 }
 
 .Mission-section {
@@ -80,7 +118,7 @@
 .Project-card-img-div {
   vertical-align: middle;
   max-height: 450px;
-  max-width: 600px;
+  min-width: 600px;
 }
 
 .Project-card-img {
