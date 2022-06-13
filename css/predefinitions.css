@@ -135,9 +135,10 @@ button:hover {
 }
 
 .btn-md:hover {
-  background-color: var(--MainColor);
-  color: var(--White);
+  /* background-color: var(--MainColor); */
+  color: var(--MainColor);
   box-shadow: none;
+  background-color: var(--ActiveColor);
 }
 
 /* ------------------------- */
@@ -396,11 +397,11 @@ footer .container h3 {
 footer .container h3::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   left: 0;
-  width: 50px;
+  width: 90px;
   height: 2px;
-  background: var(--Red);
+  background: var(--ActiveColor);
 }
 
 footer p {
